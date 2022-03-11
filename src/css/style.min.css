@@ -1,3 +1,63 @@
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes button {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  30% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes button {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  30% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 * {
   font-family: 'Museo Sans Cyrl', sans-serif;
 }
@@ -153,13 +213,24 @@
   font-size: 17px;
 }
 
+.button_animated {
+  -webkit-animation-name: backInLeft;
+          animation-name: backInLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
 .button_main {
   width: 150px;
-  height: 46px;
+  height: 57px;
   margin-top: 4px;
   margin-left: 30px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .button_submit {
@@ -168,10 +239,23 @@
   font-size: 16px;
 }
 
+.button_submit_btn {
+  display: block;
+  margin-bottom: 10px;
+}
+
 .button_mini {
   width: 135px;
   height: 44px;
   font-size: 14px;
+}
+
+@media (max-width: 1201px) {
+  .button_main {
+    width: 275px;
+    height: 57px;
+    margin-right: 40px;
+  }
 }
 
 .advantages {
@@ -217,6 +301,17 @@
   margin-bottom: 65px;
 }
 
+.advantages__img_animated {
+  -webkit-animation-name: heartbeat;
+          animation-name: heartbeat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
 .title {
   font-weight: bold;
   font-size: 36px;
@@ -253,6 +348,15 @@
   top: 32%;
 }
 
+.error {
+  border: 2px solid green;
+}
+
+label.error {
+  color: white;
+  text-align: center;
+}
+
 .feed-form {
   position: absolute;
   top: 40%;
@@ -270,6 +374,7 @@
 
 .feed-form input {
   background: #FFFFFF;
+  border: 2px solid black;
   border-radius: 6px;
   height: 50px;
   margin-bottom: 11px;
@@ -282,6 +387,12 @@
 
 .feed-form input:nth-child(3) {
   margin-bottom: 20px;
+}
+
+.feed-form_forms {
+  top: 30%;
+  left: 17%;
+  margin-top: 0px;
 }
 
 .carousel {
@@ -618,6 +729,7 @@
 .footer {
   position: relative;
   height: 630px;
+  background: #E5E5E5;
 }
 
 .footer__info {
@@ -630,11 +742,45 @@
   padding: 50px 53px 56px 52px;
 }
 
+.footer__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 212px;
+  margin: 36px 59px;
+}
+
+.footer__icons-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 53px;
+  height: 52px;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.0001);
+  border: 2px solid #FFFFFF;
+}
+
+.footer__icons-link img {
+  width: 19px;
+  height: 25px;
+}
+
 .footer__addr {
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   color: #FFFFFF;
+  margin: 0 21px;
 }
 
 .footer__phone {
@@ -644,5 +790,137 @@
   line-height: 20px;
   color: #FFFFFF;
   margin: 36px 88px;
+}
+
+@media (max-width: 1201px) {
+  .header__phone {
+    margin-right: 75px;
+  }
+  .header__text {
+    left: 40%;
+  }
+  .promo__wrapper h1 {
+    font-size: 43px;
+    margin-right: 50px;
+  }
+  .promo__wrapper h2 {
+    margin-top: 8px;
+    margin-right: 50px;
+  }
+  .promo__picture {
+    margin-right: 36px;
+  }
+  .promo__link {
+    font-size: 17px;
+    margin-right: 41px;
+  }
+  .advantages__img {
+    width: 42px;
+    margin-right: 145px;
+    margin-left: 110px;
+  }
+  .advantages__descr {
+    font-size: 18px;
+    margin-right: 28px;
+  }
+  .advantages__subtitle {
+    margin: 21px;
+  }
+  .advantages__item {
+    margin-left: 10px;
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.56);
+}
+
+.modal {
+  padding: 35px 40px 23px 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 425px;
+  min-height: 428px;
+  background: #F2F2F2;
+}
+
+.modal__subtitle {
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 19px;
+  text-align: center;
+  color: #0D0D0D;
+}
+
+.modal__descr {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 14px;
+  text-align: center;
+  color: #0D0D0D;
+}
+
+.modal__close {
+  position: absolute;
+  font-size: 60px;
+  line-height: 21px;
+  top: 0%;
+  right: -9%;
+  color: red;
+  cursor: pointer;
+}
+
+.modal_mini {
+  min-height: 143px;
+}
+
+.modal__error {
+  display: block;
+  border: 2px solid red;
+}
+
+.feed-form input {
+  border: 2px solid red;
+}
+
+#phone-error {
+  text-align: center;
+}
+
+#-error {
+  text-align: center;
+}
+
+#name-error {
+  border: 2px solid red;
+  text-align: center;
+}
+
+#phone-error {
+  border: 2px solid red;
+}
+
+#consultation, #order, #thanks {
+  display: none;
+}
+
+.pageup {
+  display: none;
+  position: fixed;
+  bottom: 10%;
+  right: 4%;
+  width: 40px;
+  height: 40px;
 }
 /*# sourceMappingURL=style.min.css.map */

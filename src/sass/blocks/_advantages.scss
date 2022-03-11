@@ -29,5 +29,13 @@
         margin: 28px auto;
         margin-bottom: 65px;
     }
+    &__img {
+        &_animated {
+            animation-name: heartbeat;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+    }
 }
     

@@ -1,0 +1,53 @@
+@media (max-width: 1201px) {
+    .header {
+        &__phone {
+            margin-right: 75px;
+        }
+        &__text {
+            left: 40%;
+        }
+
+    }
+    .promo {
+        &__wrapper {
+            h1 {
+                font-size: 43px;
+                margin-right: 50px;
+            }
+            h2 {
+                margin-top: 8px;
+                margin-right: 50px;
+            }
+        }
+        &__picture {
+            margin-right: 36px;
+        }
+        &__link {
+            font-size: 17px;
+            margin-right: 41px;
+        }    
+    }
+    .advantages {
+        &__img {
+            width: 42px;
+            margin-right: 145px;
+            margin-left: 110px;
+        }
+        &__descr {
+            font-size: 18px;
+            margin-right: 28px;
+        }
+        &__subtitle {
+            margin: 21px;
+        }
+        &__item {
+            margin-left: 10px;
+        }
+    }
+
+}
+                
+
+        
+
+		

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +8,22 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <title>Pulse</title>
 </head>
 <body>
     <div class="promo">
         <div class="container">
-            <header class="header">
+            <header id="up" class="header">
                 <a href="#" class="header__logo">
-                    <img src="/src/img/promo/running-man-2-64.png" alt="run">
+                    <img src="img/promo/running-man-2-64.png" alt="run">
                 </a>
                 <div class="header__text">Официальный представитель
                     <span>Garmin, Polar, Suunto</span>
                 </div>
                 <div class="header__phone">
                     <a href="tel:+7499922-8974">+7 (499) 922-89-74</a>
-                    <button class="button">
+                    <button data-modal="consultation" class="button button_animated">
                         заказать звонок
                     </button>
                 </div>
@@ -33,19 +34,19 @@
 
             <div class="promo__picture">
                 <div class="promo__icon">
-                <img src="/src/img/promo/019_timer_time_stopwatch_2-64.png" alt="icon">
+                <img src="img/promo/019_timer_time_stopwatch_2-64.png" alt="icon">
                 Время подбора:10 минут
             </div>
             <div class="promo__icon">
-                <img src="/src/img/promo/app 08 hand cart 64.png" alt="icon1">
+                <img src="img/promo/handcat.png" alt="icon1">
                 Бесплатная доставка
             </div>
             <div class="promo__icon">
-                <img src="/src/img/promo/messages 64.png" alt="messages">
+                <img src="img/promo/messages64.png" alt="messages">
                 Ответим на все вопросы
             </div>
         </div>
-        <button class="button button_main">заказать консультацию</button>
+        <button data-modal="consultation" class="button button_main">заказать консультацию</button>
             <div class="promo__link">
                 или
                 <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
@@ -56,15 +57,15 @@
 
     <div class="advantages">
         <div class="container">
-            <h2 class="title">НАШИ ПРЕИМУЩЕСТВА</h2>
+            <h2 class="title animate__animated animate__flash wow">НАШИ ПРЕИМУЩЕСТВА</h2>
             <div class="advantages__wrapper">
-                <div class="advantages__item">
+                <div class="advantages__item zoomIn animated">
                 <img src="/src/img/advantages/cup.png" alt="cup" class="advantages__img">
                 <div class="advantages__descr">Делимся опытом</div>
                 <div class="advantages__subtitle">Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</div>
             </div>
             <div class="advantages__item">
-                <img src="/src/img/advantages/heart.png" alt="heart" class="advantages__img">
+                <img src="/src/img/advantages/heart.png" alt="heart" class="advantages__img advantages__img_animated">
                 <div class="advantages__descr">Заботимся о здоровье</div>
                 <div class="advantages__subtitle">Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!</div>
             </div>
@@ -82,7 +83,7 @@
                 <div class="consultation__text">Просто заполните форму заявки <br> 
                     и мы перезвоним вам в течении 10 минут</div>
 
-                    <form class="feed-form" action="#">
+                    <form id="consultation-form" class="feed-form" action="#">
                         <input name="name" required placeholder="Ваше имя" type="text">
                         <input name="number" required placeholder="Ваш телефон" type="number">
                         <input name="email" required placeholder="Ваш E-mail" type="text">
@@ -91,21 +92,21 @@
                     </form>
         </div>
     </div>
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div>
-                    <img src="img/slider/Слайд №1.png" alt="slide">
+                    <img src="img/slider/Слайд№1.png" alt="slide">
                 </div>
                 <div>
-                    <img src="img/slider/Слайд №2.png" alt="slide">
+                    <img src="img/slider/Слайд№2.png" alt="slide">
                 </div>
                 <div>
-                    <img src="img/slider/Слайд №3.png" alt="slide">
+                    <img src="img/slider/Слайд№3.png" alt="slide">
                 </div>
               </div>
         </div>
-    </section>
+    </div>
     <section class="catalog">
         <div class="container">
             <h2 class="title">Каталог пульсометров</h2>
@@ -280,7 +281,7 @@
             <div class="catalog-item__content catalog-item__content_active">
                <img src="img/catalog/photo.png" alt="pulsometr" class="catalog-item__img">
                <div class="catalog-item__subtitle">
-                  Пульсометр Polar FT1
+                Пульсометр Suunto M2
                </div>
                <div class="catalog-item__descr">
                   Для первых шагов в тренировках, основанных на сердечном ритме
@@ -423,7 +424,7 @@
     <section class="comments">
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
-            <div class="comments__block">
+            <div class="comments__block animate__animated animate__heartBeat wow" data-wow-duration="2s">
                     <div class="comments__img">
                         <img src="/src/img/commetns/girl.png" alt="girl">
                     </div>
@@ -437,7 +438,7 @@
                             <br> Спасибо, RunSmart! </div>
                     </div>
                 </div>
-                <div class="comments__block">
+                <div class="comments__block animate__animated animate__heartBeat wow" data-wow-duration="2s">
                     <div class="comments__img">
                         <img src="/src/img/commetns/man.png" alt="man">
                     </div>
@@ -449,7 +450,7 @@
                             <br>С ними подготовился к своему первому полумарафону! Спасибо!!! </div>
                     </div>
                 </div>
-                <div class="comments__block">
+                <div class="comments__block animate__animated animate__heartBeat wow" data-wow-duration="2s">
                     <div class="comments__img">
                         <img src="/src/img/commetns/rungirl.png" alt="rungirl">
                     </div>
@@ -468,17 +469,64 @@
         <div class="footer__info">
             <address class="footer__addr">Москва, Мясницкий проезд, д.3с1</address>
             <a class="footer__phone" href="tel:84999228974">8 (499) 922-89-74</a>
-            <a href="#" class="footer__link"><img src="/src/icons/facebook.png" alt="facebook"></a>
-            <a href="#" class="footer__link"><img src="/src/icons/instagram.png" alt="instagram"></a>
-            <a href="#" class="footer__link"><img src="/src/icons/pinterest.png" alt="pinterest"></a>
+            <div class="footer__icons">
+            <a href="#" class="footer__icons-link"><img src="/src/icons/facebook.png" alt="facebook"></a>
+            <a href="#" class="footer__icons-link"><img src="/src/icons/instagram.png" alt="instagram"></a>
+            <a href="#" class="footer__icons-link"><img src="/src/icons/pinterest.png" alt="pinterest"></a>
+        </div>
         </div>
     </footer>
-    <div class="container"></div>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заполните форму заявки</div>
+            <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+            <form class="feed-form feed-form_forms" action="#">
+                <input name="name" required placeholder="Ваше имя" type="text">
+                <!-- <input name="phone" required placeholder="Ваш телефон" type="number"> -->
+                <input type="email" required placeholder="Ваш email" type="text">
+
+
+                <button class="button button_submit button button_submit_btn">Заказать консультацию</button>
+            </form>
+        </div>
+        <div class="modal" id="order">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Ваш заказ:</div>
+            <div class="modal__descr">Пульсометр Polar FT1</div>
+            <form class="feed-form feed-form_forms" action="#">
+                <input name="name" required placeholder="Ваше имя" type="text">
+                <input name="phone" required placeholder="Ваш телефон" type="number">
+                <input type="email" required placeholder="Ваш email" type="text">
+
+
+                <button class="button button_submit button button_submit_btn">Заказать консультацию</button>
+                <div class="modal__error"></div>
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+            <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+        </div>
+    </div>
+
+    
+    <a href="#up" class="pageup">
+        <img src="icons/circle-chevron-up-solid.svg" alt="up">
+    </a>
+   
+    <h1 class="animate__animated animate__flash">An animated element</h1>
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js" ></script>
 </body>
 </html>

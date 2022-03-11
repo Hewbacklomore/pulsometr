@@ -1,6 +1,7 @@
 .footer {
     position: relative;
     height: 630px;
+    background: #E5E5E5;
     &__info {
         position: absolute;
         width: 460px;
@@ -10,11 +11,32 @@
         left: 35%;
         padding: 50px 53px 56px 52px;
     }
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        width: 212px;
+        margin: 36px 59px;
+        &-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 53px;
+            height: 52px;
+            border-radius: 100%;
+            background: rgba(0, 0, 0, 0.0001);
+            border: 2px solid #FFFFFF;
+            img {
+                width: 19px;
+                height: 25px;
+                }
+            }
+    }
     &__addr {
         font-weight: 500;
         font-size: 20px;
         line-height: 20px;
         color: #FFFFFF;
+        margin: 0 21px;
     }
     &__phone {
         display: block;

@@ -90,4 +90,75 @@ $(document).ready(function(){
             $('.catalog-item__list').toggleClass('catalog-item__list_active');
         }) 
     }) 
+
+    //Modal
+    $('[data-modal=consultation]').on('click', function() {
+      $('.overlay, #consultation').fadeIn();
+    });
+    $('.modal__close').on('click', function() {
+      $('.overlay, #consultation, #order, #thanks').fadeOut();
+    });
+    // $('.button_main').on('click', function() {
+    //   $('.overlay, #order' ).fadeIn();
+    // });
+    $('.button_main').each(function(i) {
+    $(this).on('click', function() {
+        $('.overlay, #order' ).fadeIn();
+        $('#order, .modal__descr').text($('.catalog-item__subtitle').any(i).text());
+      })
+    });
+    // $('#consultation-form').validate();
+    // $('#consultation form').validate({
+    //   messages: {
+    //     phone: "Напиши свой телефон",
+    //     name: "Пожалуйста, заполни поле",
+    //     email: {
+    //       required: "Заполни свой email",
+    //       email: "Заполни свой email"
+    //     }
+    //   }
+    // });
+    // $('#order form').validate();
+
+    function valideForms(form) {
+      $(form).validate({
+        messages: {
+          name: "Пожалуйста, заполни поле",
+          email: {
+            required: "Заполни свой email",
+            email: "Заполни свой email"
+          }
+        }
+      });
+    }
+    valideForms('#consultation-form');
+    valideForms('#consultation form');
+    valideForms('#order form');
+
+    $('input[name=phone]').mask("+38(066) 999-9999");
+
+    $('form').submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+      }).done(function() {
+        $(this).find('input').val("");
+
+        $('form').trigger('reset');
+      });
+      return false;
+    });
+
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 1600) {
+          $('.pageup').fadeIn();
+      } else {
+          $('.pageup').fadeOut();
+      }
+    });
+    new WOW().init();
 });
+
+

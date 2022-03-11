@@ -1,3 +1,6 @@
+@import 'base/_animations.scss';
+
+
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
@@ -18,3 +21,6 @@
 @import 'blocks/_catalog.scss';
 @import 'blocks/_comments.scss';
 @import 'blocks/_footer.scss';
+@import 'blocks/_media.scss';
+@import 'blocks/_modal.scss';
+@import 'blocks/_pageup.scss';
